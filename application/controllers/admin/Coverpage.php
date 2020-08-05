@@ -31,7 +31,7 @@ class Coverpage extends CI_Controller
 		if (!empty($_FILES['filefoto']['name'])) {
 			if ($this->upload->do_upload('filefoto')) {
 				$gbr = $this->upload->data();
-	                        //Compress Image
+				//Compress Image
 				$config['image_library'] = 'gd2';
 				$config['source_image'] = './theme/images/coverpage/' . $gbr['file_name'];
 				$config['create_thumb'] = false;
@@ -45,21 +45,19 @@ class Coverpage extends CI_Controller
 
 				$gambar = $gbr['file_name'];
 				$judul = strip_tags($this->input->post('xjudul'));
-				
-			
 
-                $this->m_coverpage->simpan_coverpage($judul, $gambar);
+
+
+				$this->m_coverpage->simpan_coverpage($judul, $gambar);
 				echo $this->session->set_flashdata('msg', 'success');
 				redirect('admin/coverpage');
 			} else {
 				echo $this->session->set_flashdata('msg', 'warning');
 				redirect('admin/coverpage');
 			}
-
 		} else {
 			redirect('admin/coverpage');
 		}
-
 	}
 
 	function update_coverpage()
@@ -73,7 +71,7 @@ class Coverpage extends CI_Controller
 		if (!empty($_FILES['filefoto']['name'])) {
 			if ($this->upload->do_upload('filefoto')) {
 				$gbr = $this->upload->data();
-	                        //Compress Image
+				//Compress Image
 				$config['image_library'] = 'gd2';
 				$config['source_image'] = './theme/images/coverpage/' . $gbr['file_name'];
 				$config['create_thumb'] = false;
@@ -91,25 +89,22 @@ class Coverpage extends CI_Controller
 				$images = $this->input->post('gambar');
 				$path = './theme/images/coverpage/' . $images;
 				unlink($path);
-			
-                $this->m_coverpage->update_coverpage($judul, $gambar);
+
+				$this->m_coverpage->update_coverpage($judul, $gambar);
 				echo $this->session->set_flashdata('msg', 'info');
 				redirect('admin/coverpage');
-
 			} else {
 				echo $this->session->set_flashdata('msg', 'warning');
 				redirect('admin/coverpage');
 			}
-
 		} else {
 			$coverpage_id = $this->input->post('kode');
-            $judul = strip_tags($this->input->post('xjudul'));
-            
-            $this->m_coverpage->update_coverpage($judul, $gambar);
+			$judul = strip_tags($this->input->post('xjudul'));
+
+			$this->m_coverpage->update_coverpage($judul, $gambar);
 			echo $this->session->set_flashdata('msg', 'info');
 			redirect('admin/coverpage');
 		}
-
 	}
 
 	function hapus_coverpage()
@@ -122,5 +117,4 @@ class Coverpage extends CI_Controller
 		echo $this->session->set_flashdata('msg', 'success-hapus');
 		redirect('admin/coverpage');
 	}
-
 }

@@ -19,9 +19,9 @@ class M_bph extends CI_Model
         $this->db->insert('tbl_bph', $data);
     }
 
-    
 
-	//UPDATE Bph //
+
+    //UPDATE Bph //
 
     function update_bph($where, $data)
     {
@@ -30,11 +30,10 @@ class M_bph extends CI_Model
     }
 
 
-	//END UPDATE Bph//
+    //END UPDATE Bph//
 
     function hapus_bph($id)
     {
         $this->db->delete('tbl_bph', array('bph_id' => $id));
     }
-
 }

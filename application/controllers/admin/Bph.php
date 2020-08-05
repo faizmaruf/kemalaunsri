@@ -89,7 +89,6 @@ class Bph extends CI_Controller
                 'bph_fakultas' => $fakultas,
                 'bph_facebook' => $facebook,
                 'bph_instagram' => $instagram,
-                'bph_photo' => $gambar,
             );
 
             $this->m_bph->simpan_bph($data);
@@ -163,8 +162,8 @@ class Bph extends CI_Controller
         $data = $this->m_bph->get_all_bphById($id);
         $q = $data->row_array();
         $p = $q['bph_photo'];
-        $path = base_url() . 'assets/images/bph/' . $p;
-        delete_files($path);
+        $path =  './assets/images/bph/' . $p;
+        unlink($path);
         $this->m_bph->hapus_bph($id);
         echo $this->session->set_flashdata('msg', 'success-hapus');
         redirect('admin/bph');

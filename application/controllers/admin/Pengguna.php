@@ -212,8 +212,8 @@ class Pengguna extends CI_Controller
 		$data = $this->m_pengguna->get_pengguna_login($id);
 		$q = $data->row_array();
 		$p = $q['pengguna_photo'];
-		$path = base_url() . 'assets/images/admin/' . $p;
-		delete_files($path);
+		$path =  './assets/images/admin/' . $p;
+		unlink($path);
 		$this->m_pengguna->hapus_pengguna($id);
 		echo $this->session->set_flashdata('msg', 'success-hapus');
 		redirect('admin/pengguna');

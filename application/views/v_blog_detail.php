@@ -2,7 +2,7 @@
 error_reporting(0);
 $b = $data->row_array();
 $url = base_url() . 'artikel/' . $b['tulisan_slug'];
-$img = base_url() . 'assets/images/tulisan' . $b['tulisan_gambar'];
+$img = base_url() . 'assets/images/tulisan/' . $b['tulisan_gambar'];
 $title = $b['tulisan_judul'];
 $author = $b['tulisan_author'];
 $date = $b['tanggal'];
@@ -158,7 +158,7 @@ $rating = $b['tulisan_rating'];
 							<div class="media">
 								<div class="media-left">
 									<a href="<?php echo base_url() . 'artikel/' . $row->tulisan_slug; ?>">
-										<img class="media-object" src="<?php echo base_url() . 'assets/images/' . $row->tulisan_gambar; ?>" width="90">
+										<img class="media-object" src="<?php echo base_url() . 'assets/images/tulisan/' . $row->tulisan_gambar; ?>" width="90">
 									</a>
 								</div>
 								<div class="media-body">
@@ -176,7 +176,7 @@ $rating = $b['tulisan_rating'];
 							<div class="media">
 								<div class="media-left">
 									<a href="<?php echo base_url() . 'artikel/' . $row->tulisan_slug; ?>">
-										<img class="media-object" src="<?php echo base_url() . 'assets/images/' . $row->tulisan_gambar; ?>" width="90">
+										<img class="media-object" src="<?php echo base_url() . 'assets/images/tulisan/' . $row->tulisan_gambar; ?>" width="90">
 									</a>
 								</div>
 								<div class="media-body">
