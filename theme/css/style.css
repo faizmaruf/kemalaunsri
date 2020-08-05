@@ -13,7 +13,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -922,9 +922,18 @@ figure {
   }
 }
 
-.fh5co-staff img {
+.fh5co-staff {
+  /* border: 1px solid red; */
+  padding-top: 10px;
+  margin: 1em 0px;
+  -webkit-box-shadow: 0px 47px 51px -71px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 47px 51px -71px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 47px 51px -71px rgba(0, 0, 0, 0.75);
   margin-bottom: 1em;
+  max-height: 480px;
 }
+
+/* .fh5co-staff img {} */
 
 .fh5co-staff h3 {
   margin: 0 0 10px 0;
@@ -936,11 +945,19 @@ figure {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.card {
+  border-right: 2px solid rgba(0, 0, 0, 0.06);
+  border-left: 2px solid rgba(0, 0, 0, 0.06);
+}
+
 .fh5co-staff .fh5co-social {
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+
 }
 
 .fh5co-staff .fh5co-social a {
+  border: 1px solid yellowgreen;
   color: #000;
 }
 

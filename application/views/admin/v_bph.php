@@ -116,7 +116,7 @@ $this->load->view('admin/v_head');
     </div>
     <!-- ./wrapper -->
 
-    <!--Modal Add Pengguna-->
+    <!--Modal Add BPH-->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -184,14 +184,14 @@ $this->load->view('admin/v_head');
                         <div class="form-group">
                             <label for="inputInstagram" class="col-sm-4 control-label">Instagram</label>
                             <div class="col-sm-7">
-                                <input type="text" name="xinstagram" class="form-control" id="inputInstagram" placeholder="Input link Instagram" required>
+                                <input type="text" name="xinstagram" class="form-control" value="#" id="inputInstagram" placeholder="Input link Instagram" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="inputFacebook" class="col-sm-4 control-label">Facebook</label>
                             <div class="col-sm-7">
-                                <input type="text" name="xfacebook" class="form-control" id="inputFacebook" placeholder="Input link Facebook" required>
+                                <input type="text" name="xfacebook" class="form-control" value="#" id="inputFacebook" placeholder="Input link Facebook" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -231,7 +231,7 @@ $this->load->view('admin/v_head');
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Add bph</h4>
+                        <h4 class="modal-title" id="myModalLabel">Update bph</h4>
                     </div>
                     <form class="form-horizontal" action="<?php echo base_url() . 'admin/Bph/update' ?>" method="post" enctype="multipart/form-data">
                         <div class="modal-body">
@@ -239,25 +239,26 @@ $this->load->view('admin/v_head');
                             <div class="form-group">
                                 <label for="inputUserName" class="col-sm-4 control-label">Nama</label>
                                 <div class="col-sm-7">
-                                    <input type="text" name="xnama" class="form-control" id="inputUserName" value="sikmik" placeholder="Nama Lengkap" required>
+                                    <input type="text" name="xnama" class="form-control" id="inputUserName" value="<?= $bph_nama; ?>" placeholder="Nama Lengkap" required>
+                                    <input type="hidden" name="xid" value="<?php echo $bph_id; ?>" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputNim" class="col-sm-4 control-label">Nim</label>
                                 <div class="col-sm-7">
-                                    <input type="text" name="xnim" class="form-control" id="inputNim" placeholder="Nim" required>
+                                    <input type="text" name="xnim" class="form-control" id="inputNim" placeholder="Nim" value="<?= $bph_nim; ?>" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputAngkatan" class="col-sm-4 control-label">Angkatan</label>
                                 <div class="col-sm-7">
-                                    <input type="text" name="xangkatan" class="form-control" id="inputAngkatan" placeholder="Angkatan" required>
+                                    <input type="text" name="xangkatan" class="form-control" id="inputAngkatan" placeholder="Angkatan" value="<?= $bph_angkatan; ?>" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputJabatan" class="col-sm-4 control-label">Jabatan</label>
                                 <div class="col-sm-7">
-                                    <input type="text" name="xjabatan" class="form-control" id="inputJabatan" placeholder="Jabatan" required>
+                                    <input type="text" name="xjabatan" class="form-control" id="inputJabatan" placeholder="Jabatan" value="<?= $bph_jabatan; ?>" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -276,7 +277,7 @@ $this->load->view('admin/v_head');
                             <div class="form-group">
                                 <label for="inputUserName" class="col-sm-4 control-label">Fakultas</label>
                                 <div class="col-sm-7">
-                                    <select class="form-control" name="xfakultas" required>
+                                    <select class="form-control" name="xfakultas" value="<?= $bph_fakultas; ?>" required>
                                         <option value="FE">FE</option>
                                         <option value="FH">FH</option>
                                         <option value="FT">FT</option>
@@ -293,14 +294,14 @@ $this->load->view('admin/v_head');
                             <div class="form-group">
                                 <label for="inputInstagram" class="col-sm-4 control-label">Instagram</label>
                                 <div class="col-sm-7">
-                                    <input type="text" name="xinstagram" class="form-control" id="inputInstagram" placeholder="Input link Instagram" required>
+                                    <input type="text" name="xinstagram" class="form-control" id="inputInstagram" placeholder="Input link Instagram" value="<?= $bph_instagram; ?>" required>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputFacebook" class="col-sm-4 control-label">Facebook</label>
                                 <div class="col-sm-7">
-                                    <input type="text" name="xfacebook" class="form-control" id="inputFacebook" placeholder="Input link Facebook" required>
+                                    <input type="text" name="xfacebook" class="form-control" id="inputFacebook" placeholder="Input link Facebook" value="<?= $bph_facebook; ?>" required>
                                 </div>
                             </div>
                             <div class="form-group">

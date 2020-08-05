@@ -43,4 +43,4 @@ class Komentar extends CI_Controller
 		echo $this->session->set_flashdata('msg', 'success-hapus');
 		redirect('admin/komentar');
 	}
-} 
+}

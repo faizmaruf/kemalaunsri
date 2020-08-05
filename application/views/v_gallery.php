@@ -13,6 +13,7 @@
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="<?php echo base_url() . 'theme/css/animate.css' ?>">
 	<!-- Icomoon Icon Fonts-->

@@ -37,7 +37,7 @@ $rating = $b['tulisan_rating'];
 	<meta property="og:image:width" content="460" />
 	<meta property="og:image:height" content="440" />
 	<link rel="shorcut icon" type="text/css" href="<?php echo base_url() . 'assets/images/favicon.png' ?>">
-
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- Animate.css -->

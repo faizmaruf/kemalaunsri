@@ -1,5 +1,5 @@
 <!--Counter Inbox-->
-<?php 
+<?php
 $query = $this->db->query("SELECT * FROM tbl_inbox WHERE inbox_status='1'");
 $jum_pesan = $query->num_rows();
 $query1 = $this->db->query("SELECT * FROM tbl_komentar WHERE komentar_status='0'");
@@ -7,315 +7,317 @@ $jum_komentar = $query1->num_rows();
 ?>
 <!DOCTYPE html>
 <html>
-<?php 
+<?php
 $this->load->view('admin/v_head');
 ?>
+
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-<!--Header & SideBar-->
-<?php 
-$this->load->view('admin/v_header');
-$this->load->view('admin/v_sidebar');
-?>
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Komentar
-        <small></small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Komentar</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="box">
-           
-          <div class="box">
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table id="example1" class="table table-striped" style="font-size:13px;">
-                <thead>
-                <tr>
-					<th style="width:100px;">Tanggal</th>
-                    <th>Nama</th> 
-                    <th>Komentar</th>  
-                    <th style="text-align:right;">Aksi</th>
-                </tr>
-                </thead>
-                <tbody>
-				<?php
-    $no = 0;
-    foreach ($data->result_array() as $i) :
-        $no++;
-    $id = $i['komentar_id'];
-    $nama = $i['komentar_nama'];
-    $email = $i['komentar_email'];
-    $isi = $i['komentar_isi'];
-    $tanggal = $i['tanggal'];
-    $status = $i['komentar_status'];
+  <div class="wrapper">
+    <!--Header & SideBar-->
+    <?php
+    $this->load->view('admin/v_header');
+    $this->load->view('admin/v_sidebar');
     ?>
-                <tr>
-                  <td><?php echo $tanggal; ?></td>
-                  <td><?php echo $nama; ?></td>
-                  <td><?php echo $isi; ?></td>
-                  <td style="text-align:right;">
-                      <?php if ($status == '1') : ?>
-                        <a class="btn" data-toggle="modal" data-target="#ModalEdit<?php echo $id; ?>"><span class="fa fa-pencil"></span></a>
-                      <?php else : ?>
-                        <a class="btn" data-toggle="modal" data-target="#Modalpublish<?php echo $id; ?>"><span class="fa fa-check"></span></a>
-                        <a class="btn" data-toggle="modal" data-target="#ModalHapus<?php echo $id; ?>"><span class="fa fa-trash"></span></a>
-                      <?php endif; ?>
-                  </td>
-                </tr>
-				<?php endforeach; ?>
-                </tbody>
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
-        </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <?php 
-    $this->load->view('admin/v_footer');
-    ?> 
-  
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Komentar
+          <small></small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li class="active">Komentar</li>
+        </ol>
+      </section>
 
-  
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="box">
 
-<!--Modal Add Pengguna-->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Add Kategori</h4>
-                    </div>
-                    <form class="form-horizontal" action="<?php echo base_url() . 'admin/kategori/simpan_kategori' ?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">
-                                
-                                    <div class="form-group">
-                                        <label for="inputUserName" class="col-sm-4 control-label">Kategori</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" name="xkategori" class="form-control" id="inputUserName" placeholder="Kategori" required>
-                                        </div>
-                                    </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
-                    </div>
-                    </form>
+              <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                  <table id="example1" class="table table-striped" style="font-size:13px;">
+                    <thead>
+                      <tr>
+                        <th style="width:100px;">Tanggal</th>
+                        <th>Nama</th>
+                        <th>Komentar</th>
+                        <th style="text-align:right;">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                      $no = 0;
+                      foreach ($data->result_array() as $i) :
+                        $no++;
+                        $id = $i['komentar_id'];
+                        $nama = $i['komentar_nama'];
+                        $email = $i['komentar_email'];
+                        $isi = $i['komentar_isi'];
+                        $tanggal = $i['tanggal'];
+                        $status = $i['komentar_status'];
+                      ?>
+                        <tr>
+                          <td><?php echo $tanggal; ?></td>
+                          <td><?php echo $nama; ?></td>
+                          <td><?php echo $isi; ?></td>
+                          <td style="text-align:right;">
+                            <?php if ($status == '1') : ?>
+                              <a class="btn" data-toggle="modal" data-target="#ModalEdit<?php echo $id; ?>"><span class="fa fa-pencil"></span></a>
+                            <?php else : ?>
+                              <a class="btn" data-toggle="modal" data-target="#Modalpublish<?php echo $id; ?>"><span class="fa fa-check"></span></a>
+                              <a class="btn" data-toggle="modal" data-target="#ModalHapus<?php echo $id; ?>"><span class="fa fa-trash"></span></a>
+                            <?php endif; ?>
+                          </td>
+                        </tr>
+                      <?php endforeach; ?>
+                    </tbody>
+                  </table>
                 </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
             </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <?php
+    $this->load->view('admin/v_footer');
+    ?>
+
+
+
+    <div class="control-sidebar-bg"></div>
+  </div>
+  <!-- ./wrapper -->
+
+  <!--Modal Add Pengguna-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+          <h4 class="modal-title" id="myModalLabel">Add Kategori</h4>
         </div>
-		
-		
-		<?php foreach ($data->result_array() as $i) :
-        $id = $i['komentar_id'];
+        <form class="form-horizontal" action="<?php echo base_url() . 'admin/kategori/simpan_kategori' ?>" method="post" enctype="multipart/form-data">
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label for="inputUserName" class="col-sm-4 control-label">Kategori</label>
+              <div class="col-sm-7">
+                <input type="text" name="xkategori" class="form-control" id="inputUserName" placeholder="Kategori" required>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary btn-flat" id="simpan">Simpan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <?php foreach ($data->result_array() as $i) :
+    $id = $i['komentar_id'];
     $nama = $i['komentar_nama'];
     $email = $i['komentar_email'];
     $isi = $i['komentar_isi'];
     $tanggal = $i['tanggal'];
     $tulisan_id = $i['komentar_tulisan_id'];
-    ?>
-	<!--Modal Edit Pengguna-->
-        <div class="modal fade" id="ModalEdit<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Balas Komentar</h4>
-                    </div>
-                    <form class="form-horizontal" action="<?php echo base_url() . 'admin/komentar/reply' ?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">
-                                
-                      <p><b><?php echo $nama; ?>: </b><?php echo $isi; ?></p>
-                      <div class="form-group">
-                        <div class="col-sm-12">
-                          <b>Balas:</b>
-											     <input type="hidden" name="kode" value="<?php echo $id; ?>"/> 
-                           <input type="hidden" name="tulisan_id" value="<?php echo $tulisan_id; ?>"/> 
-                           <textarea class="form-control" name="komentar" rows="6" required></textarea>
-                        </div>
-                      </div>
+  ?>
+    <!--Modal Edit Pengguna-->
+    <div class="modal fade" id="ModalEdit<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+            <h4 class="modal-title" id="myModalLabel">Balas Komentar</h4>
+          </div>
+          <form class="form-horizontal" action="<?php echo base_url() . 'admin/komentar/reply' ?>" method="post" enctype="multipart/form-data">
+            <div class="modal-body">
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Komentari</button>
-                    </div>
-                    </form>
+              <p><b><?php echo $nama; ?>: </b><?php echo $isi; ?></p>
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <b>Balas:</b>
+                  <input type="hidden" name="kode" value="<?php echo $id; ?>" />
+                  <input type="hidden" name="tulisan_id" value="<?php echo $tulisan_id; ?>" />
+                  <textarea class="form-control" name="komentar" rows="6" required></textarea>
                 </div>
+              </div>
+
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary btn-flat" id="simpan">Komentari</button>
+            </div>
+          </form>
         </div>
-	<?php endforeach; ?>
+      </div>
+    </div>
+  <?php endforeach; ?>
 
   <?php foreach ($data->result_array() as $i) :
-        $id = $i['komentar_id'];
+    $id = $i['komentar_id'];
     $nama = $i['komentar_nama'];
     $email = $i['komentar_email'];
     $isi = $i['komentar_isi'];
     $tanggal = $i['tanggal'];
     $kategori_nama = $i['kategori_nama'];
-    ?>
-  <!--Modal Hapus Pengguna-->
-        <div class="modal fade" id="Modalpublish<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Publish Komentar</h4>
-                    </div>
-                    <form class="form-horizontal" action="<?php echo base_url() . 'admin/komentar/publish' ?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">       
-              <input type="hidden" name="kode" value="<?php echo $id; ?>"/> 
-                            <p>Apakah Anda yakin mau mempublikasikan komentar dari <b><?php echo $nama; ?></b> ?</p>
-                               
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Publish</button>
-                    </div>
-                    </form>
-                </div>
+  ?>
+    <!--Modal Hapus Pengguna-->
+    <div class="modal fade" id="Modalpublish<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+            <h4 class="modal-title" id="myModalLabel">Publish Komentar</h4>
+          </div>
+          <form class="form-horizontal" action="<?php echo base_url() . 'admin/komentar/publish' ?>" method="post" enctype="multipart/form-data">
+            <div class="modal-body">
+              <input type="hidden" name="kode" value="<?php echo $id; ?>" />
+              <p>Apakah Anda yakin mau mempublikasikan komentar dari <b><?php echo $nama; ?></b> ?</p>
+
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary btn-flat" id="simpan">Publish</button>
+            </div>
+          </form>
         </div>
+      </div>
+    </div>
   <?php endforeach; ?>
-	
-	<?php foreach ($data->result_array() as $i) :
+
+  <?php foreach ($data->result_array() as $i) :
     $id = $i['komentar_id'];
-$nama = $i['komentar_nama'];
-$email = $i['komentar_email'];
-$isi = $i['komentar_isi'];
-$tanggal = $i['tanggal'];
-$kategori_nama = $i['kategori_nama'];
-?>
-	<!--Modal Hapus Pengguna-->
-        <div class="modal fade" id="ModalHapus<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
-                        <h4 class="modal-title" id="myModalLabel">Hapus Komentar</h4>
-                    </div>
-                    <form class="form-horizontal" action="<?php echo base_url() . 'admin/komentar/hapus_komentar' ?>" method="post" enctype="multipart/form-data">
-                    <div class="modal-body">       
-							<input type="hidden" name="kode" value="<?php echo $id; ?>"/> 
-                            <p>Apakah Anda yakin mau menghapus komentar dari <b><?php echo $nama; ?></b> ?</p>
-                               
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat" id="simpan">Hapus</button>
-                    </div>
-                    </form>
-                </div>
+    $nama = $i['komentar_nama'];
+    $email = $i['komentar_email'];
+    $isi = $i['komentar_isi'];
+    $tanggal = $i['tanggal'];
+    $kategori_nama = $i['kategori_nama'];
+  ?>
+    <!--Modal Hapus Pengguna-->
+    <div class="modal fade" id="ModalHapus<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><span class="fa fa-close"></span></span></button>
+            <h4 class="modal-title" id="myModalLabel">Hapus Komentar</h4>
+          </div>
+          <form class="form-horizontal" action="<?php echo base_url() . 'admin/komentar/hapus_komentar' ?>" method="post" enctype="multipart/form-data">
+            <div class="modal-body">
+              <input type="hidden" name="kode" value="<?php echo $id; ?>" />
+              <p>Apakah Anda yakin mau menghapus komentar dari <b><?php echo $nama; ?></b> ?</p>
+
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary btn-flat" id="simpan">Hapus</button>
+            </div>
+          </form>
         </div>
-	<?php endforeach; ?>
-	
-	
+      </div>
+    </div>
+  <?php endforeach; ?>
 
 
-<!-- jQuery 2.2.3 -->
-<script src="<?php echo base_url() . 'assets/plugins/jQuery/jquery-2.2.3.min.js' ?>"></script>
-<!-- Bootstrap 3.3.6 -->
-<script src="<?php echo base_url() . 'assets/bootstrap/js/bootstrap.min.js' ?>"></script>
-<!-- DataTables -->
-<script src="<?php echo base_url() . 'assets/plugins/datatables/jquery.dataTables.min.js' ?>"></script>
-<script src="<?php echo base_url() . 'assets/plugins/datatables/dataTables.bootstrap.min.js' ?>"></script>
-<!-- SlimScroll -->
-<script src="<?php echo base_url() . 'assets/plugins/slimScroll/jquery.slimscroll.min.js' ?>"></script>
-<!-- FastClick -->
-<script src="<?php echo base_url() . 'assets/plugins/fastclick/fastclick.js' ?>"></script>
-<!-- AdminLTE App -->
-<script src="<?php echo base_url() . 'assets/dist/js/app.min.js' ?>"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url() . 'assets/dist/js/demo.js' ?>"></script>
-<script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/toast/jquery.toast.min.js' ?>"></script>
-<!-- page script -->
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false
+
+
+  <!-- jQuery 2.2.3 -->
+  <script src="<?php echo base_url() . 'assets/plugins/jQuery/jquery-2.2.3.min.js' ?>"></script>
+  <!-- Bootstrap 3.3.6 -->
+  <script src="<?php echo base_url() . 'assets/bootstrap/js/bootstrap.min.js' ?>"></script>
+  <!-- DataTables -->
+  <script src="<?php echo base_url() . 'assets/plugins/datatables/jquery.dataTables.min.js' ?>"></script>
+  <script src="<?php echo base_url() . 'assets/plugins/datatables/dataTables.bootstrap.min.js' ?>"></script>
+  <!-- SlimScroll -->
+  <script src="<?php echo base_url() . 'assets/plugins/slimScroll/jquery.slimscroll.min.js' ?>"></script>
+  <!-- FastClick -->
+  <script src="<?php echo base_url() . 'assets/plugins/fastclick/fastclick.js' ?>"></script>
+  <!-- AdminLTE App -->
+  <script src="<?php echo base_url() . 'assets/dist/js/app.min.js' ?>"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="<?php echo base_url() . 'assets/dist/js/demo.js' ?>"></script>
+  <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/toast/jquery.toast.min.js' ?>"></script>
+  <!-- page script -->
+  <script>
+    $(function() {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
+      });
     });
-  });
-</script>
-<?php if ($this->session->flashdata('msg') == 'error') : ?>
-        <script type="text/javascript">
-                $.toast({
-                    heading: 'Error',
-                    text: "Password dan Ulangi Password yang Anda masukan tidak sama.",
-                    showHideTransition: 'slide',
-                    icon: 'error',
-                    hideAfter: false,
-                    position: 'bottom-right',
-                    bgColor: '#FF4859'
-                });
-        </script>
-    
-    <?php elseif ($this->session->flashdata('msg') == 'success') : ?>
-        <script type="text/javascript">
-                $.toast({
-                    heading: 'Success',
-                    text: "Komentar telah dibalas.",
-                    showHideTransition: 'slide',
-                    icon: 'success',
-                    hideAfter: false,
-                    position: 'bottom-right',
-                    bgColor: '#7EC857'
-                });
-        </script>
-    <?php elseif ($this->session->flashdata('msg') == 'info') : ?>
-        <script type="text/javascript">
-                $.toast({
-                    heading: 'Info',
-                    text: "Komentar berhasil di publikasi.",
-                    showHideTransition: 'slide',
-                    icon: 'info',
-                    hideAfter: false,
-                    position: 'bottom-right',
-                    bgColor: '#00C9E6'
-                });
-        </script>
-    <?php elseif ($this->session->flashdata('msg') == 'success-hapus') : ?>
-        <script type="text/javascript">
-                $.toast({
-                    heading: 'Success',
-                    text: "Komentar Berhasil dihapus.",
-                    showHideTransition: 'slide',
-                    icon: 'success',
-                    hideAfter: false,
-                    position: 'bottom-right',
-                    bgColor: '#7EC857'
-                });
-        </script>
-    <?php else : ?>
+  </script>
+  <?php if ($this->session->flashdata('msg') == 'error') : ?>
+    <script type="text/javascript">
+      $.toast({
+        heading: 'Error',
+        text: "Password dan Ulangi Password yang Anda masukan tidak sama.",
+        showHideTransition: 'slide',
+        icon: 'error',
+        hideAfter: false,
+        position: 'bottom-right',
+        bgColor: '#FF4859'
+      });
+    </script>
 
-    <?php endif; ?>
+  <?php elseif ($this->session->flashdata('msg') == 'success') : ?>
+    <script type="text/javascript">
+      $.toast({
+        heading: 'Success',
+        text: "Komentar telah dibalas.",
+        showHideTransition: 'slide',
+        icon: 'success',
+        hideAfter: false,
+        position: 'bottom-right',
+        bgColor: '#7EC857'
+      });
+    </script>
+  <?php elseif ($this->session->flashdata('msg') == 'info') : ?>
+    <script type="text/javascript">
+      $.toast({
+        heading: 'Info',
+        text: "Komentar berhasil di publikasi.",
+        showHideTransition: 'slide',
+        icon: 'info',
+        hideAfter: false,
+        position: 'bottom-right',
+        bgColor: '#00C9E6'
+      });
+    </script>
+  <?php elseif ($this->session->flashdata('msg') == 'success-hapus') : ?>
+    <script type="text/javascript">
+      $.toast({
+        heading: 'Success',
+        text: "Komentar Berhasil dihapus.",
+        showHideTransition: 'slide',
+        icon: 'success',
+        hideAfter: false,
+        position: 'bottom-right',
+        bgColor: '#7EC857'
+      });
+    </script>
+  <?php else : ?>
+
+  <?php endif; ?>
 </body>
+
 </html>

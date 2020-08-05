@@ -1,6 +1,6 @@
 <?php
 class Alumni extends CI_Controller
-{	
+{
 	private $filename = "import_data"; // Kita tentukan nama filenya
 	function __construct()
 	{
@@ -24,52 +24,51 @@ class Alumni extends CI_Controller
 
 	function simpan_alumni()
 	{
-            $nama = $this->input->post('xnama');
-			$angkatan = $this->input->post('xangkatan');
-			$fakultas = $this->input->post('xfakultas');
-			$nohp = $this->input->post('xkontak');
-				$data = array(
-				'alumni_nama' => $nama,
-				'alumni_angkatan' => $angkatan,
-				'alumni_fakultas' => $fakultas,
-				'alumni_nohp' => $nohp,
-				
-            );
-            $this->m_alumni->simpan_alumni($data);
-				echo $this->session->set_flashdata('msg', 'success');
-				redirect('admin/Alumni');
+		$nama = $this->input->post('xnama');
+		$angkatan = $this->input->post('xangkatan');
+		$fakultas = $this->input->post('xfakultas');
+		$nohp = $this->input->post('xkontak');
+		$data = array(
+			'alumni_nama' => $nama,
+			'alumni_angkatan' => $angkatan,
+			'alumni_fakultas' => $fakultas,
+			'alumni_nohp' => $nohp,
+
+		);
+		$this->m_alumni->simpan_alumni($data);
+		echo $this->session->set_flashdata('msg', 'success');
+		redirect('admin/Alumni');
 	}
 
 	function update_alumni()
-	{	
-            $nama = $this->input->post('xnama');
-			$angkatan = $this->input->post('xangkatan');
-			$fakultas = $this->input->post('xfakultas');
-            $nohp = $this->input->post('xkontak');
-            $id = $this->input->post('xid');
-			$where = array(
-				'alumni_id' => $id,
-			);
-				$data = array(
-				'alumni_nama' => $nama,
-				'alumni_angkatan' => $angkatan,
-				'alumni_fakultas' => $fakultas,
-				'alumni_nohp' => $nohp,
-				
-            );
-            $this->m_alumni->update_alumni($where, $data);
-			echo $this->session->set_flashdata('msg', 'info');
-			redirect('admin/Alumni');
+	{
+		$nama = $this->input->post('xnama');
+		$angkatan = $this->input->post('xangkatan');
+		$fakultas = $this->input->post('xfakultas');
+		$nohp = $this->input->post('xkontak');
+		$id = $this->input->post('xid');
+		$where = array(
+			'alumni_id' => $id,
+		);
+		$data = array(
+			'alumni_nama' => $nama,
+			'alumni_angkatan' => $angkatan,
+			'alumni_fakultas' => $fakultas,
+			'alumni_nohp' => $nohp,
 
+		);
+		$this->m_alumni->update_alumni($where, $data);
+		echo $this->session->set_flashdata('msg', 'info');
+		redirect('admin/Alumni');
 	}
 
-    function hapus_alumni()
-    {
-        $id = $this->input->post('xid');
-        $data = $this->m_alumni->get_all_alumniById($id);
-        $this->m_alumni->hapus_alumni($id);
-        echo $this->session->set_flashdata('msg', 'success-hapus');
-        redirect('admin/Alumni');
+	function hapus_alumni()
+	{
+		$id = $this->input->post('xid');
+		$data = $this->m_alumni->get_all_alumniById($id);
+		$this->m_alumni->hapus_alumni($id);
+		echo $this->session->set_flashdata('msg', 'success-hapus');
+		redirect('admin/Alumni');
 	}
 
 	//import
@@ -82,7 +81,7 @@ class Alumni extends CI_Controller
 		$csvreader = PHPExcel_IOFactory::createReader('CSV');
 		$loadcsv = $csvreader->load('csv/' . $this->filename . '.csv'); // Load file yang tadi diupload ke folder csv
 		$sheet = $loadcsv->getActiveSheet()->getRowIterator();
-		
+
 		// Buat sebuah variabel array untuk menampung array data yg akan kita insert ke database
 		$data = [];
 
@@ -102,20 +101,20 @@ class Alumni extends CI_Controller
 					array_push($get, $cell->getValue()); // Menambahkan value ke variabel array $get
 				}
 				// <-- END
-				
+
 				// Ambil data value yang telah di ambil dan dimasukkan ke variabel $get
 				$nama = $get[0]; // Ambil data Nim dari kolom A di csv
 				$angkatan = $get[1]; // Ambil data nama dari kolom B di csv
 				$fakultas = $get[2]; // Ambil data prodi dari kolom C di csv
 				$nohp = $get[3]; // Ambil data email dari kolom D di csv
-				
+
 				// Kita push (add) array data ke variabel data			
 				array_push($data, [
 					'alumni_nama' => $nama, // Insert data nama
 					'alumni_angkatan' => $angkatan, // Insert data angkatan
 					'alumni_fakultas' => $fakultas, // Insert data fakultas
 					'alumni_nohp' => $nohp, // Insert data nohp
-					
+
 				]);
 			}
 
@@ -142,7 +141,7 @@ class Alumni extends CI_Controller
 				$csvreader = PHPExcel_IOFactory::createReader('CSV');
 				$loadcsv = $csvreader->load('csv/' . $this->filename . '.csv'); // Load file yang tadi diupload ke folder csv
 				$sheet = $loadcsv->getActiveSheet()->getRowIterator();
-				
+
 				// Masukan variabel $sheet ke dalam array data yang nantinya akan di kirim ke file form.php
 				// Variabel $sheet tersebut berisi data-data yang sudah diinput di dalam csv yang sudha di upload sebelumnya
 				$data['sheet'] = $sheet;
@@ -154,9 +153,4 @@ class Alumni extends CI_Controller
 
 		$this->load->view('admin/v_importdataalumni', $data);
 	}
-
-	
-
-
-	
 }

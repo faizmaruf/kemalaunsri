@@ -36,8 +36,8 @@ class Bph extends CI_Controller
                 $config['create_thumb'] = false;
                 $config['maintain_ratio'] = false;
                 $config['quality'] = '90%';
-                $config['width'] = 300;
-                $config['height'] = 400;
+                $config['width'] = 360;
+                $config['height'] = 240;
                 $config['new_image'] = './assets/images/bph/' . $gbr['file_name'];
                 $this->load->library('image_lib', $config);
                 $this->image_lib->resize();
@@ -99,7 +99,6 @@ class Bph extends CI_Controller
 
     function update()
     {
-
         $config['upload_path'] = './assets/images/bph/'; //path folder
         $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
         $config['encrypt_name'] = true; //nama yang terupload nantinya
@@ -114,8 +113,8 @@ class Bph extends CI_Controller
                 $config['create_thumb'] = false;
                 $config['maintain_ratio'] = false;
                 $config['quality'] = '90%';
-                $config['width'] = 300;
-                $config['height'] = 400;
+                $config['width'] = 360;
+                $config['height'] = 240;
                 $config['new_image'] = './assets/images/bph/' . $gbr['file_name'];
                 $this->load->library('image_lib', $config);
                 $this->image_lib->resize();
@@ -147,7 +146,7 @@ class Bph extends CI_Controller
 
 
                 $this->m_bph->update_bph($where, $data);
-                echo $this->session->set_flashdata('msg', 'success');
+                echo $this->session->set_flashdata('msg', 'info');
                 redirect('admin/bph');
             } else {
                 echo $this->session->set_flashdata('msg', 'warning');
