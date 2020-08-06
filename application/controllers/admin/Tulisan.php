@@ -87,7 +87,9 @@ class Tulisan extends CI_Controller
 
 	function update_tulisan()
 	{
-
+		$photo = $this->input->post('xphoto');
+		$path = './assets/images/tulisan/' . $photo;
+		unlink($path);
 		$config['upload_path'] = './assets/images/tulisan/'; //path folder
 		$config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
 		$config['encrypt_name'] = true; //nama yang terupload nantinya

@@ -65,19 +65,21 @@
 			<div class="container">
 				<div class="col-md-6">
 					<figure>
-						<img src="<?php echo base_url() . 'theme/images/image_1.jpg' ?>" alt="Free HTML5 Template" class="img-responsive">
+						<img src="<?php echo base_url() . 'theme/images/image_11.jpeg' ?>" alt="Free HTML5 Template" class="img-responsive">
 					</figure>
 				</div>
 				<div class="col-md-6">
 					<h3>Visi</h3>
 					<ul>
-						<li>Menjadi Perusahaan IT Profesional dengan solusi dan layanan yang optimal serta memiliki daya saing.</li>
-						<li>Memberikan Layanan dan Solusi yang terintegerasi dan mengikuti perkembangan dunia Teknologi Informasi.</li>
+						<li>Menjadikan Kemala Unsri sebagai wadah kolaborasi baik internal maupun eksternal guna mewujudkan organisasi kedaerahan yang progresif dan bernafaskan profesionalisme</li>
+
 					</ul>
 					<h3>Misi</h3>
 					<ul>
-						<li>Tidak hanya memberi solusi, kami memberikan layanan yang terpadu dalam setiap layanan Teknologi Informasi yang kami berikan.</li>
-						<li>Memberikan produk dan layanan yang berkualitas dengan layanan purna jual yang maksimal kepada setiap pelangan kami.</li>
+						<li>Meningkatkan nuansa kekeluargaan baik horizontal maupun vertikal anggota Kemala Unsri</li>
+						<li>Menginisiasi pengembangan bakat dan minat anggota Kemala Unsri</li>
+						<li>Mengintensifkan kegiatan pengabdian dalam bentuk pendidikan sosial masyarakat</li>
+						<li>Meningkatkan kaderisasi internal guna menumbuhkan potensi anggota Kemala Unsri</li>
 					</ul>
 				</div>
 			</div>

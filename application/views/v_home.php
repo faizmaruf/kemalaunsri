@@ -86,6 +86,12 @@
 						<span class="icon"><img src="<?php echo base_url() . 'theme/images/27.svg' ?>" class="img-responsive"></span>
 						<h3>WEB DESIGN</h3>
 						<p>Bangun identitas bisnis dan usaha anda di dunia Internet melalui Website.</p>
+						<h1>
+							<?= $jumlahanggota; ?>
+						</h1>
+						<h1>
+							<?= $jumlahalumni; ?>
+						</h1>
 						<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p>
 					</div>
 				</div>
@@ -95,11 +101,11 @@
 
 		<div class="fh5co-section-with-image">
 
-			<img src="<?php echo base_url() . 'theme/images/image_1.jpg' ?>" alt="" class="img-responsive">
+			<img src="<?php echo base_url() . 'theme/images/image_10.jpg' ?>" alt="" class="img-responsive">
 			<div class="fh5co-box animate-box">
-				<h2>Berpikir Maju</h2>
-				<p>Kami selalu membangun aplikasi dengan teknologi terbaru.</p>
-				<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Get started <i class="icon-arrow-right"></i></a></p>
+				<h2>Sriwijaya In Action</h2>
+				<p>Acara akbar Keluarga Mahasiswa Lampung Universitas Sriwijaya (KEMALA UNSRI)</p>
+				<p><a href="https://www.instagram.com/sriwijayainaction/" target="_blank" class="btn btn-primary btn-outline with-arrow">Lihat<i class="icon-arrow-right"></i></a></p>
 			</div>
 
 		</div>

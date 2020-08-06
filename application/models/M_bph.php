@@ -28,6 +28,11 @@ class M_bph extends CI_Model
         $this->db->where($where);
         $this->db->update("tbl_bph", $data);
     }
+    function hapus_gambar($where)
+    {
+        $hsl = $this->db->query("DELETE FROM tbl_bph(bph_photo) WHERE bph_id='$where'");
+        return $hsl;
+    }
 
 
     //END UPDATE Bph//

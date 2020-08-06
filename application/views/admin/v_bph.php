@@ -241,6 +241,7 @@ $this->load->view('admin/v_head');
                                 <div class="col-sm-7">
                                     <input type="text" name="xnama" class="form-control" id="inputUserName" value="<?= $bph_nama; ?>" placeholder="Nama Lengkap" required>
                                     <input type="hidden" name="xid" value="<?php echo $bph_id; ?>" />
+                                    <input type="hidden" name="xphoto" value="<?php echo $bph_photo; ?>" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -346,6 +347,7 @@ $this->load->view('admin/v_head');
                     <form class="form-horizontal" action="<?php echo base_url() . 'admin/bph/hapus_bph' ?>" method="post" enctype="multipart/form-data">
                         <div class="modal-body">
                             <input type="hidden" name="xid" value="<?php echo $bph_id; ?>" />
+                            <input type="hidden" name="xphoto" value="<?php echo $bph_photo; ?>" />
                             <p>Apakah Anda yakin mau menghapus bph <b><?php echo $bph_nama; ?></b> ?</p>
 
                         </div>
