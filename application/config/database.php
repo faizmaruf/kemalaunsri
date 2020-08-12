@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'http://www.kemalaunsri.org/',
+	'hostname' => 'localhost',
 	'username' => 'kemalaun_root',
 	'password' => 'sriwijayafc08',
 	'database' => 'kemalaun_db_kemala',
