@@ -106,7 +106,7 @@ $this->load->view('admin/v_head');
   </div>
   <!-- ./wrapper -->
 
-  <!--Modal Add Pengguna-->
+  <!--Modal Add Galery-->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -238,7 +238,7 @@ $this->load->view('admin/v_head');
     $galeri_album_id = $i['galeri_album_id'];
     $galeri_album_nama = $i['album_nama'];
   ?>
-    <!--Modal Hapus Pengguna-->
+    <!--Modal Hapus Galery-->
     <div class="modal fade" id="ModalHapus<?php echo $galeri_id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

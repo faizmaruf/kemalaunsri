@@ -11,7 +11,7 @@
 				<li><i class="icon-map"></i> 02 Jl. Al Khoiriah, Timbangan, Ogan Ilir, Sumatera Selatan 30862</li>
 				<li><i class="icon-phone"></i> +62 8984 1531 17</li>
 				<li><i class="icon-envelope"></i> <a href="#">kemalaunsri@gmail.com</a></li>
-				<li><i class="icon-globe"></i> <a href="#">www.kemalaunsri.com</a></li>
+				<li><i class="icon-globe"></i> <a href="#">www.kemalaunsri.org</a></li>
 			</ul>
 
 

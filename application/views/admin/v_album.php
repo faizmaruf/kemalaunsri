@@ -104,7 +104,7 @@ $this->load->view('admin/v_head');
   </div>
   <!-- ./wrapper -->
 
-  <!--Modal Add Pengguna-->
+  <!--Modal Add album-->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

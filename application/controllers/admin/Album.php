@@ -36,7 +36,7 @@ class Album extends CI_Controller
 				$config['source_image'] = './assets/images/album/' . $gbr['file_name'];
 				$config['create_thumb'] = false;
 				$config['maintain_ratio'] = false;
-				$config['quality'] = '60%';
+				$config['quality'] = '90%';
 				$config['width'] = 500;
 				$config['height'] = 400;
 				$config['new_image'] = './assets/images/album/' . $gbr['file_name'];
