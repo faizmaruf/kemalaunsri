@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jul 20, 2020 at 04:04 PM
+-- Generation Time: Aug 12, 2020 at 03:04 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.1
 
@@ -58,6 +58,13 @@ CREATE TABLE `tbl_album` (
   `album_cover` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_album`
+--
+
+INSERT INTO `tbl_album` (`album_id`, `album_nama`, `album_tanggal`, `album_pengguna_id`, `album_author`, `album_count`, `album_cover`) VALUES
+(1, 'ICF', '2020-08-12 14:18:44', 13, 'faiz', 0, '5fe34bd8b4c2090b7322e74e1b3094aa.png');
+
 -- --------------------------------------------------------
 
 --
@@ -98,9 +105,161 @@ CREATE TABLE `tbl_anggota` (
 --
 
 INSERT INTO `tbl_anggota` (`anggota_id`, `anggota_nama`, `anggota_angkatan`, `anggota_fakultas`, `anggota_nohp`) VALUES
-(13, 'Idho Faizi Maulana', '2019', 'FKIP', '08984152113'),
-(14, 'Sendy', '2019', 'FKIP', '08984152113'),
-(15, 'Derry ', '2019', 'FK', '089841531174');
+(16, 'Wildani Syifa\'a', '2016', 'FISIP', '-'),
+(17, 'Dinda Dwi P', '2016', 'FKIP', '-'),
+(18, 'Winda Agustina', '2016', 'FISIP', '-'),
+(19, 'Retno Evani Sari', '2016', 'FP', '-'),
+(20, 'Ismaul Izza', '2016', 'FKIP', '-'),
+(21, 'Aprilia Ayu W', '2016', 'FT', '-'),
+(22, 'Habibul Malik', '2016', 'FE', '-'),
+(23, 'Yogi Renaldi', '2016', 'FE', '-'),
+(24, 'M. Syukron Jamil S', '2016', 'FE', '-'),
+(25, 'Edwin Guntoro ', '2016', 'FT', '-'),
+(26, 'Muadz', '2016', 'FISIP', '-'),
+(27, 'Rifaldi Sanjaya', '2016', 'FISIP', '-'),
+(28, 'Triyansyah Arbi S.', '2016', 'FISIP', '-'),
+(29, 'M. Septian Racman Dika', '2016', 'FT', '-'),
+(30, 'Okta Tasti', '2016', 'FH', '-'),
+(31, 'Qara’a Alfath', '2016', 'FT', '-'),
+(32, 'Dicky Eriyanto', '2016', 'FISIP', '-'),
+(33, 'Arya Fahrul T', '2016', 'FE', '-'),
+(34, 'Siti Fatimah', '2016', 'FKIP', '-'),
+(35, 'Monia Anggeta', '2016', 'FKM', '-'),
+(36, 'Atria Rifanda H', '2016', 'FKM', '-'),
+(37, 'Kemas Andra ', '2016', 'FISIP', '-'),
+(38, 'Akbar Wiranata', '2016', 'FASILKOM', '-'),
+(39, 'Suep Abdul Fatah', '2016', 'FISIP', '-'),
+(40, 'Yuli Nurul Hidayati', '2019', 'FE', '-'),
+(41, 'Dina Innaka Putri', '2019', 'FMIPA', '-'),
+(42, 'Nyayu Afifa Triana', '2019', 'FK', '-'),
+(43, 'Berta Herdiana', '2019', 'FKIP', '-'),
+(44, 'Siti Aisyah Oktaviana', '2019', 'FISIP', '-'),
+(45, 'Dinda Maulia Dini', '2019', 'FH', '-'),
+(46, 'Sisdelina Pijartara M.', '2019', 'FK', '-'),
+(47, 'Siti Nurridha Nayarizky', '2019', 'FKM', '-'),
+(48, 'Niko Ardianto', '2019', 'FT', '-'),
+(49, 'Rindy Violita Sari', '2019', 'FP', '-'),
+(50, 'Tarisa Ade Safitri', '2019', 'FE', '-'),
+(51, 'Luluk Ayu Ningtiyas', '2019', 'FISIP', '-'),
+(52, 'Wirda Dwi Pratiwi', '2019', 'FE', '-'),
+(53, 'Sendi Adi Pranata', '2019', 'FKIP', '-'),
+(54, 'M. Sandy Kurniawan', '2019', 'FT', '-'),
+(55, 'Dero Raihan', '2019', 'FISIP', '-'),
+(56, 'Angga Febriyanto', '2019', 'FK', '-'),
+(57, 'Haliza Syahrany A.', '2019', 'FISIP', '-'),
+(58, 'Diko Fahri Ferdiansyah', '2019', 'FMIPA', '-'),
+(59, 'Desta Chandra Safitri', '2019', 'FKM', '-'),
+(60, 'Rizqy Fadhilah Putri R.', '2019', 'FMIPA', '-'),
+(61, 'Idho Faizi Maulana ', '2019', 'FISIP', '-'),
+(62, 'Rika Amanda Safitri', '2019', 'FKM', '-'),
+(63, 'Novia Puspita Sari', '2019', 'FMIPA', '-'),
+(64, 'Nadia Azzahra Adinias', '2019', 'FKM', '-'),
+(65, 'M. Rafli Alamsyah Ratu', '2019', 'FISIP', '-'),
+(66, 'Annisa Sri Kawuryan', '2019', 'FISIP', '-'),
+(67, 'Latifa Tsalisa', '2019', 'FMIPA', '-'),
+(68, 'Rizka Sekar Ayu Kinanti', '2019', 'FKIP', '-'),
+(69, 'Jihan Aribah', '2019', 'FK', '-'),
+(70, 'Adit Alfito Riski', '2019', 'FISIP', '-'),
+(71, 'Gracela Natalisa Sunarto', '2019', 'FKM', '-'),
+(72, 'Angga Pratama', '2019', 'FT', '-'),
+(73, 'Yustika Aminudin', '2019', 'FT', '-'),
+(74, 'Indah Novita Ramadhan', '2019', 'FKM', '-'),
+(75, 'Rida Seranita Al Rasyid', '2019', 'FMIPA', '-'),
+(76, 'Luthfiyah Syaharani', '2019', 'FKIP', '-'),
+(77, 'Zaki Nugraha Muhammad', '2019', 'FASILKOM', '-'),
+(78, 'Dayang Linggar Mawarni', '2019', 'FKM', '-'),
+(79, 'Nia Santika', '2019', 'FKM', '-'),
+(80, 'Juhro Afidatur Rofi’ah P.', '2019', 'FMIPA', '-'),
+(81, 'Febrisha Amanda Azizah', '2019', 'FMIPA', '-'),
+(82, 'A. D. Azzahra', '2019', 'FKM', '-'),
+(83, 'Broery Rendika Rafly', '2019', 'FMIPA', '-'),
+(84, 'Zenada Armandika Agung', '2019', 'FKM', '-'),
+(85, 'Amanda Idelia Verina', '2019', 'FMIPA', '-'),
+(86, 'Clara Diva Chrysantana', '2019', 'FK', '-'),
+(87, 'M. Dandi Rizki Alghifari', '2019', 'FISIP', '-'),
+(88, 'Fadel Muhammad', '2019', 'FASILKOM', '-'),
+(89, 'Jerry Firmansyah', '2019', 'FMIPA', '-'),
+(90, 'Siksa Safitri', '2019', 'FMIPA', '-'),
+(91, 'Adeka Rismayansyah', '2019', 'FT', '-'),
+(92, 'Arini Luvita Sari', '2019', 'FMIPA', '-'),
+(93, 'Afifah Citra', '2017', 'FKM', '-'),
+(94, 'Ahmad Defril', '2017', 'FT', '-'),
+(95, 'Aida Muthia', '2017', 'FKM', '-'),
+(96, 'Annisa Pangestuti U', '2017', 'FKM', '-'),
+(97, 'Apriana Rahmawati', '2017', 'FP', '-'),
+(98, 'Balqis Nada', '2017', 'FKIP', '-'),
+(99, 'Bella Janati', '2017', 'FMIPA', '-'),
+(100, 'Cahaya Fitri Ananda', '2017', 'FKM', '-'),
+(101, 'Chairanil Fadhilah', '2017', 'FP', '-'),
+(102, 'Deka Andaresta', '2017', 'FISIP', '-'),
+(103, 'Ayu Septi S', '2017', 'FMIPA', '-'),
+(104, 'Deni Lidya', '2017', 'FASILKOM', '-'),
+(105, 'Dery Adrian', '2017', 'FK', '-'),
+(106, 'Diah Mustika', '2017', 'FKM', '-'),
+(107, 'Diyaz Rachmaningtyas', '2017', 'FMIPA', '-'),
+(108, 'Elsyana Agtha', '2017', 'FH', '-'),
+(109, 'Faiz Ma’ruf', '2017', 'FASILKOM', '-'),
+(110, 'Ghina Sekar P', '2017', 'FKM', '-'),
+(111, 'Indah suci', '2017', 'FMIPA', '-'),
+(112, 'Irvan Demawan', '2017', 'FH', '-'),
+(113, 'Jihan Nurlela', '2017', 'FKM', '-'),
+(114, 'Kevin Akbar', '2017', 'FH', '-'),
+(115, 'Melani Kemala F', '2017', 'FK', '-'),
+(116, 'Merdeli Imania', '2017', 'FISIP', '-'),
+(117, 'M. Faqih Rabbani', '2017', 'FISIP', '-'),
+(118, 'M. Ichsan Alfathur', '2017', 'FT', '-'),
+(119, 'M. Mas Agussyah', '2017', 'FH', '-'),
+(120, 'M. Rifky Bunga Bali', '2017', 'FT', '-'),
+(121, 'Radjeza Ariandi', '2017', 'FKIP', '-'),
+(122, 'Rofa Febrianti', '2017', 'FK', '-'),
+(123, 'Roy Lathiful F', '2017', 'FKM', '-'),
+(124, 'Shaskya Chika', '2017', 'FISIP', '-'),
+(125, 'Vania Arista', '2017', 'FISIP', '-'),
+(126, 'Yohanes Setiawan', '2017', 'FP', '-'),
+(127, 'Nugrahani Aldama', '2018', 'FH', '-'),
+(128, 'nnisa Mila Zakiyya', '2018', 'FH', '-'),
+(129, 'M. Fadjar Kusuma Admadja', '2018', 'FH', '-'),
+(130, 'M. Afiiq Naufal Nazhif', '2018', 'FH', '-'),
+(131, 'Marilda Anjelina', '2018', 'FKM', '-'),
+(132, 'Ahmad Abu Dzar', '2018', 'FKM', '-'),
+(133, 'Novita Yolanda Kurniawati', '2018', 'FKM', '-'),
+(134, 'Anggi Yulistia Maharani', '2018', 'FKM', '-'),
+(135, 'A. Rozi Firdaus', '2018', 'FKM', '-'),
+(136, 'Apri Rismawan', '2018', 'FKM', '-'),
+(137, 'Irma Oktaviani', '2018', 'FKM', '-'),
+(138, 'Dhara Fauzia', '2018', 'FMIPA', '-'),
+(139, 'Dinia Tausiyah D', '2018', 'FMIPA', '-'),
+(140, 'Dezh Nahda Athiya', '2018', 'FMIPA', '-'),
+(141, 'Irma Nadia', '2018', 'FMIPA', '-'),
+(142, 'Indah Nur Safitri', '2018', 'FMIPA', '-'),
+(143, 'Mita Fitriani', '2018', 'FMIPA', '-'),
+(144, 'Dian Khayatun Nikmah', '2018', 'FE', '-'),
+(145, 'Destia Putri', '2018', 'FE', '-'),
+(146, 'Ardiansyah Guntara', '2018', 'FE', '-'),
+(147, 'Wahyu Alghiffari', '2018', 'FE', '-'),
+(148, 'Rahmat Tri Julianto', '2018', 'FT', '-'),
+(149, 'Kelvinda Dwi Yulpan', '2018', 'FT', '-'),
+(150, 'Ahmad Ridho Saputra', '2018', 'FT', '-'),
+(151, 'Rama Diana Fitri Yanti', '2018', 'FT', '-'),
+(152, 'Ilham Gusti Wijayanto', '2018', 'FT', '-'),
+(153, 'Yesa Rolisah', '2018', 'FK', '-'),
+(154, 'Fyona Shafa Amadhea', '2018', 'FK', '-'),
+(155, 'Amelia Dwi Safitri', '2018', 'FKIP', '-'),
+(156, 'Raisya Novita Nuraisyah', '2018', 'FKIP', '-'),
+(157, 'Laksmita Wahyu Chandra U', '2018', 'FKIP', '-'),
+(158, 'Ahmad Ramdani', '2018', 'FKIP', '-'),
+(159, 'Bella Khansa Octarini', '2018', 'FISIP', '-'),
+(160, 'Dafid Herliyando', '2018', 'FISIP', '-'),
+(161, 'Kevin Ari Widiatmoko', '2018', 'FISIP', '-'),
+(162, 'Qonita Alifa Nabila AS', '2018', 'FISIP', '-'),
+(163, 'Muhammad Haris Abdillah', '2018', 'FISIP', '-'),
+(164, 'Joanna Alvilia', '2018', 'FISIP', '-'),
+(165, 'Nadila Putri Efendi', '2018', 'FISIP', '-'),
+(166, 'Ariana Herawati', '2018', 'FASILKOM', '-'),
+(167, 'Ahmad Ramdhoni K', '2018', 'FASILKOM', '-'),
+(168, 'Annisa Nurfadilah', '2018', 'FP', '-'),
+(169, 'Sandri Oxta Priansyah', '2018', 'FP', '-'),
+(170, 'Dita Aulia Jannah', '2018', 'FP', '-');
 
 -- --------------------------------------------------------
 
@@ -113,14 +272,40 @@ CREATE TABLE `tbl_bph` (
   `bph_nama` varchar(50) DEFAULT NULL,
   `bph_nim` varchar(14) NOT NULL,
   `bph_angkatan` varchar(4) NOT NULL,
-  `bph_jabatan` varchar(25) DEFAULT NULL,
+  `bph_jabatan` varchar(255) DEFAULT NULL,
   `bph_jenkel` varchar(20) DEFAULT NULL,
   `bph_fakultas` varchar(30) DEFAULT NULL,
-  `bph_facebook` varchar(35) DEFAULT NULL,
-  `bph_instagram` varchar(35) DEFAULT NULL,
+  `bph_facebook` varchar(235) DEFAULT NULL,
+  `bph_instagram` varchar(235) DEFAULT NULL,
   `bph_register` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `bph_photo` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_bph`
+--
+
+INSERT INTO `tbl_bph` (`bph_id`, `bph_nama`, `bph_nim`, `bph_angkatan`, `bph_jabatan`, `bph_jenkel`, `bph_fakultas`, `bph_facebook`, `bph_instagram`, `bph_register`, `bph_photo`) VALUES
+(9, 'Faiz Alauddin Ma\'ruf', '00000000000000', '2017', 'Ketua Umum', 'L', 'FASILKOM', '#', '#', '2020-08-05 06:48:53', 'abe9b221b340a0a6d87d708f0cfae6d7.JPG'),
+(10, 'Ahmad Defril', '0000000000001', '2017', 'Wakil Ketua Umum', 'L', 'FT', '#', '#', '2020-08-05 06:51:57', '71aef26914f6c588fa1e8011589b083f.JPG'),
+(11, 'Elsyana Agtha', '0000000000001', '2017', 'Sekertaris Umum', 'P', 'FH', '#', '#', '2020-08-05 06:52:52', '40e6ecfd75183cd7cc5e274d31367dbc.JPG'),
+(12, 'Rofa Febrianti', '0000000000001', '2017', 'Bendahara Umum', 'P', 'FK', '#', '#', '2020-08-05 06:58:33', '3fbf6a46ee980dd03de43a4dba46688e.JPG'),
+(13, 'Radjeza Ariandi', '0000000000001', '2017', 'Kordinator Wilayah Palembang', 'L', 'FKIP', '#', '#', '2020-08-05 07:08:17', 'a7f16e186f6b00e8eb0e0cd343c754df.jpg'),
+(14, 'Balqis Nada Fatinah', '0000000000001', '2017', 'Wakil Kordinator I Wilayah Palembang', 'P', 'FKIP', '#', '#', '2020-08-05 07:09:59', '21993f6e837fca62f32ca476a8f9e96d.jpeg'),
+(15, 'Shaskya Cika Drilia', '0000000000001', '2017', 'Wakil Kordinator II Wilayah Palembang', 'P', 'FE', '#', '#', '2020-08-05 07:11:06', '3b6609f4c85584ffd7fa376e799264a7.jpeg'),
+(16, 'Dery Ardian', '0000000000001', '2017', 'Kepala Departemen PPSDM', 'L', 'FE', '#', '#', '2020-08-05 08:57:54', 'd36b84d605681b4cde47e59f190d16ea.JPG'),
+(17, 'M. Ichsan Al Fathur', '0000000000001', '2017', 'Sekertaris Departemen I PPSDM', 'L', 'FT', '#', '#', '2020-08-05 08:59:45', 'bddf429eda2a8c75b74d0f53464497da.JPG'),
+(18, 'Chairanil Fadhilah', '0000000000001', '2017', 'Sekertaris Departemen II PPSDM', 'P', 'FP', '#', '#', '2020-08-05 09:01:32', 'e5a6953f3f63a64fc87353d1e68d308a.jpeg'),
+(19, 'Yohanes Setiawan', '0000000000001', '2017', 'Kepala Departemen HUMAS', 'L', 'FP', '#', '#', '2020-08-05 09:03:28', '9e89be4d39c179f0fd392f93847604f8.JPG'),
+(20, 'Cahya Fitri Ananda', '0000000000001', '2017', 'Sekertaris Departemen HUMAS bid Internal', 'P', 'FKM', '#', '#', '2020-08-05 09:04:48', '9973e9e9c8a37b8ed0ed527aef924c79.JPG'),
+(21, 'Annisa Pangestuti Utoyo', '0000000000001', '2017', 'Sekertaris Departemen HUMAS bid Eksternal', 'P', 'FKM', '#', '#', '2020-08-05 09:07:08', '5b2f64d511077ed75ac47b022baf8bec.JPG'),
+(22, 'M. Rifky Bunga Bali', '0000000000001', '2017', 'Kepala Biro KESTARI', 'L', 'FT', '#', '#', '2020-08-05 09:08:07', 'b7ca8793f1c542088f7c35d5b1a0cf6d.JPG'),
+(23, 'Indah Suci Ariana', '0000000000001', '2017', 'Kepala Departemen Kewirahusahaan', 'P', 'FMIPA', '#', '#', '2020-08-05 09:09:32', '21b0a00374980618684127a8680e2816.JPG'),
+(24, 'Deka Andaresta', '0000000000001', '2017', 'Sekertaris Departemen Kewirahusahaan', 'P', 'FISIP', '#', '#', '2020-08-05 09:10:35', '4a9990b745c80c46480011f44eeb892b.JPG'),
+(25, 'Roy Latifatul Fauzan', '0000000000001', '2017', 'Kepala Departemen SENOR', 'L', 'FKM', '#', '#', '2020-08-05 09:12:08', '3e592222e3de43d349fd29acceca81f3.JPG'),
+(26, 'Jihan Nurlela', '0000000000001', '2017', 'Sekertaris Departemen SENOR', 'P', 'FKM', '#', '#', '2020-08-05 09:12:52', '428cd6f3a009f8ba76b0411c7f8bb4d3.JPG'),
+(27, 'Deni Lidianti', '0000000000001', '2017', 'Kepala Departemen KOMINFO', 'P', 'FASILKOM', '#', '#', '2020-08-05 09:13:35', 'f55ef0f18d99067274f1fd1e7749c90e.JPG'),
+(28, 'Viola Alfheny', '0000000000001', '2017', 'Sekertaris Departemen KOMINFO', 'P', 'FASILKOM', '#', '#', '2020-08-06 07:20:37', 'b30dc25142055894b48d3f2f20cb9ab0.JPG');
 
 -- --------------------------------------------------------
 
@@ -140,7 +325,7 @@ CREATE TABLE `tbl_coverpage` (
 --
 
 INSERT INTO `tbl_coverpage` (`coverpage_id`, `coverpage_judul`, `coverpage_tanggal`, `coverpage_gambar`) VALUES
-(11, 'Keren', '2020-06-11 22:43:59', 'bbac5f2dee13ce4dbdd05954a9eb8e18.jpg');
+(13, 'Karna Kita Keluarga', '2020-08-06 15:47:56', 'ba84d7bec38e6364852c72823e23f410.png');
 
 -- --------------------------------------------------------
 
@@ -215,7 +400,8 @@ INSERT INTO `tbl_inbox` (`inbox_id`, `inbox_nama`, `inbox_email`, `inbox_kontak`
 (1, 'faiz', 'faiz.maruf8888@gmail.com', NULL, 'hai', '2020-06-06 23:00:49', 0),
 (2, 'kibar', 'pindangsehatlampung@gmail.com', NULL, 'hao', '2020-06-06 23:01:26', 0),
 (3, 'kibar', 'pindangsehatlampung@gmail.com', NULL, 'll', '2020-06-06 23:01:59', 0),
-(4, 'vio', 'vio@gmail.com', NULL, 'faiz ganteng', '2020-06-12 06:25:19', 0);
+(4, 'vio', 'vio@gmail.com', NULL, 'faiz ganteng', '2020-06-12 06:25:19', 0),
+(5, 'FAIZ ALAUDDIN MA&#039;RUF', 'faiz.maruf8888@gmail.com', NULL, 'k sdkl ml maslms', '2020-08-05 01:54:16', 0);
 
 -- --------------------------------------------------------
 
@@ -238,7 +424,8 @@ INSERT INTO `tbl_kategori` (`kategori_id`, `kategori_nama`, `kategori_tanggal`) 
 (2, 'Teknologi', '2016-09-06 05:50:01'),
 (3, 'Tips and Triks', '2016-09-06 05:59:39'),
 (5, 'Penelitian', '2016-09-06 06:19:26'),
-(7, 'Agama', '2020-02-24 15:54:29');
+(7, 'Agama', '2020-02-24 15:54:29'),
+(8, 'Pariwisata', '2020-08-05 16:14:41');
 
 -- --------------------------------------------------------
 
@@ -268,7 +455,8 @@ INSERT INTO `tbl_komentar` (`komentar_id`, `komentar_nama`, `komentar_email`, `k
 (5, 'M Fikri Setiadi', 'setiadi@mfikri.com', 'mfikri.com', '[removed]alert&amp;#40;No Found !&amp;#41;;[removed]', '2017-07-19 01:35:28', 0, 20, 2),
 (6, 'Jokowi', 'joko@gmail.com', '', 'Ping !', '2017-07-19 02:48:24', 0, 20, 2),
 (7, 'M Fikri Setiadi', NULL, NULL, 'Can I help you?', '2017-08-03 15:11:21', 1, 20, 1),
-(8, 'M Fikri Setiadi', NULL, NULL, 'Thank you.', '2017-08-03 15:27:56', 1, 20, 4);
+(8, 'M Fikri Setiadi', NULL, NULL, 'Thank you.', '2017-08-03 15:27:56', 1, 20, 4),
+(9, 'faiz', NULL, NULL, 'klnvsdvdmlmamd', '2020-08-05 01:55:53', 1, 20, 1);
 
 -- --------------------------------------------------------
 
@@ -1326,7 +1514,14 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (986, '2020-07-12 03:00:19', '::1', 'Chrome'),
 (987, '2020-07-13 02:25:57', '::1', 'Chrome'),
 (988, '2020-07-15 13:09:35', '127.0.0.1', 'Firefox'),
-(989, '2020-07-20 10:35:27', '::1', 'Chrome');
+(989, '2020-07-20 10:35:27', '::1', 'Chrome'),
+(990, '2020-07-29 23:55:58', '::1', 'Chrome'),
+(991, '2020-08-04 13:30:24', '::1', 'Chrome'),
+(992, '2020-08-05 01:50:59', '::1', 'Chrome'),
+(993, '2020-08-05 17:04:05', '::1', 'Chrome'),
+(994, '2020-08-06 17:01:41', '::1', 'Safari'),
+(995, '2020-08-09 22:57:41', '::1', 'Chrome'),
+(996, '2020-08-12 14:15:07', '::1', 'Chrome');
 
 -- --------------------------------------------------------
 
@@ -1490,7 +1685,18 @@ INSERT INTO `tbl_post_views` (`views_id`, `views_tanggal`, `views_ip`, `views_tu
 (88, '2020-06-12 06:24:54', '::1', 36),
 (89, '2020-06-12 06:30:48', '::1', 38),
 (90, '2020-06-12 06:36:12', '::1', 39),
-(91, '2020-06-12 06:37:53', '::1', 34);
+(91, '2020-06-12 06:37:53', '::1', 34),
+(92, '2020-08-04 13:35:13', '::1', 1),
+(93, '2020-08-04 13:35:14', '::1', 0),
+(94, '2020-08-04 13:53:06', '::1', 2),
+(95, '2020-08-05 01:51:05', '::1', 1),
+(96, '2020-08-05 01:51:05', '::1', 0),
+(97, '2020-08-05 16:15:56', '::1', 2),
+(98, '2020-08-05 16:45:55', '::1', 3),
+(99, '2020-08-07 02:40:39', '::1', 3),
+(100, '2020-08-07 02:40:39', '::1', 0),
+(101, '2020-08-09 23:13:15', '::1', 3),
+(102, '2020-08-09 23:13:15', '::1', 0);
 
 -- --------------------------------------------------------
 
@@ -1527,6 +1733,14 @@ CREATE TABLE `tbl_tulisan` (
   `tulisan_slug` varchar(250) DEFAULT NULL,
   `tulisan_rating` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_tulisan`
+--
+
+INSERT INTO `tbl_tulisan` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisan_tanggal`, `tulisan_kategori_id`, `tulisan_kategori_nama`, `tulisan_views`, `tulisan_gambar`, `tulisan_pengguna_id`, `tulisan_author`, `tulisan_img_slider`, `tulisan_slug`, `tulisan_rating`) VALUES
+(2, 'viola pengen naek haji', '<p>viola pengen naek haji</p>\r\n', '2020-08-05 16:15:34', 7, 'Agama', 1, 'a082aacd08e110a591edb10ab5f2c742.JPG', 13, 'faiz', 0, 'viola-pengen-naek-haji.html', 0),
+(3, 'Kominfo Kemala Memberikan Inventaris Terbaik', '<p>Kominfo Kemala memberikan inventaris terbaik berupa website.&nbsp; Website ini bertujuan untuk menjadikan salah satu media informasi Kemala Unsri</p>\r\n', '2020-08-05 16:45:49', 2, 'Teknologi', 3, 'e54e2a591ee6c1e786d2b26cccb8c7c8.png', 13, 'Grace Natalia', 0, 'kominfo-kemala-memberikan-inventaris-terbaik.html', 0);
 
 --
 -- Indexes for dumped tables
@@ -1667,7 +1881,7 @@ ALTER TABLE `tbl_agenda`
 -- AUTO_INCREMENT for table `tbl_album`
 --
 ALTER TABLE `tbl_album`
-  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `album_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_alumni`
@@ -1679,19 +1893,19 @@ ALTER TABLE `tbl_alumni`
 -- AUTO_INCREMENT for table `tbl_anggota`
 --
 ALTER TABLE `tbl_anggota`
-  MODIFY `anggota_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `anggota_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
 -- AUTO_INCREMENT for table `tbl_bph`
 --
 ALTER TABLE `tbl_bph`
-  MODIFY `bph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `bph_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `tbl_coverpage`
 --
 ALTER TABLE `tbl_coverpage`
-  MODIFY `coverpage_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `coverpage_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_files`
@@ -1703,25 +1917,25 @@ ALTER TABLE `tbl_files`
 -- AUTO_INCREMENT for table `tbl_galeri`
 --
 ALTER TABLE `tbl_galeri`
-  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `galeri_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_inbox`
 --
 ALTER TABLE `tbl_inbox`
-  MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `inbox_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_kategori`
 --
 ALTER TABLE `tbl_kategori`
-  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
-  MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `komentar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_log_aktivitas`
@@ -1739,7 +1953,7 @@ ALTER TABLE `tbl_pengguna`
 -- AUTO_INCREMENT for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
-  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=990;
+  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=997;
 
 --
 -- AUTO_INCREMENT for table `tbl_portfolio`
@@ -1757,7 +1971,7 @@ ALTER TABLE `tbl_post_rating`
 -- AUTO_INCREMENT for table `tbl_post_views`
 --
 ALTER TABLE `tbl_post_views`
-  MODIFY `views_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `views_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `tbl_testimoni`
@@ -1769,4 +1983,4 @@ ALTER TABLE `tbl_testimoni`
 -- AUTO_INCREMENT for table `tbl_tulisan`
 --
 ALTER TABLE `tbl_tulisan`
-  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `tulisan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
