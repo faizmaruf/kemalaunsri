@@ -1,0 +1,8 @@
+
+deployment:
+ 
+ tasks:
+ 
+ - export DEPLOYPATH=/home/kemalaun/http://www.kemalaunsri.org/
+ 
+ - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
