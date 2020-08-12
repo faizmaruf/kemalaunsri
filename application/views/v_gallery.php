@@ -51,7 +51,7 @@
 							<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<h2>Our Awesome Gallery</h2>
-									<p class="fh5co-lead"> Awesome source code by <a href="http://.com/" target="_blank">Faiz Maruf </a></p>
+									<!-- <p class="fh5co-lead"> Awesome source code by <a href="http://.com/" target="_blank">Faiz Maruf </a></p> -->
 								</div>
 							</div>
 						</div>

@@ -71,28 +71,32 @@
 				<div class="row">
 
 					<div class="col-md-4 text-center item-block">
-						<span class="icon"><img src="<?php echo base_url() . 'theme/images/30.svg' ?>" class="img-responsive"></span>
-						<h3>SOFTWARE & PROGRAM</h3>
-						<p>Tingkatkan kinerja perusahaan dengan Software yang sesuai dengan Business Process anda.</p>
-						<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p>
+						<span class="icon"><img src="<?php echo base_url() . 'theme/images/anggota.svg' ?>" class="img-responsive"></span>
+						<h3><?= $jumlahanggota; ?></h3>
+						<!-- <p>Tingkatkan kinerja perusahaan dengan Software yang sesuai dengan Business Process anda.</p> -->
+						<h2>
+							Anggota
+						</h2>
+						<!-- <p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p> -->
 					</div>
 					<div class="col-md-4 text-center item-block">
-						<span class="icon"><img src="<?php echo base_url() . 'theme/images/18.svg' ?>" class="img-responsive"></span>
-						<h3>IT CONSULTING</h3>
-						<p>Konsultasi kan kebutuhan IT anda pada kami dan ketahui layanan lain yang kami berikan.</p>
-						<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p>
+						<span class="icon"><img src="<?php echo base_url() . 'theme/images/proker.svg' ?>" class="img-responsive"></span>
+						<h3>34</h3>
+						<!-- <p>Konsultasi kan kebutuhan IT anda pada kami dan ketahui layanan lain yang kami berikan.</p> -->
+						<!-- <p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p> -->
+						<h2>Program Kerja</h2>
 					</div>
 					<div class="col-md-4 text-center item-block">
-						<span class="icon"><img src="<?php echo base_url() . 'theme/images/27.svg' ?>" class="img-responsive"></span>
-						<h3>WEB DESIGN</h3>
-						<p>Bangun identitas bisnis dan usaha anda di dunia Internet melalui Website.</p>
-						<h1>
-							<?= $jumlahanggota; ?>
-						</h1>
-						<h1>
-							<?= $jumlahalumni; ?>
-						</h1>
-						<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p>
+						<span class="icon"><img src="<?php echo base_url() . 'theme/images/alumni.svg' ?>" class="img-responsive"></span>
+						<h3>
+							<!-- <?= $jumlahalumni; ?> -->69
+						</h3>
+						<!-- <p>Bangun identitas bisnis dan usaha anda di dunia Internet melalui Website.</p> -->
+
+						<h2>
+							Alumni
+						</h2>
+						<!-- <p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p> -->
 					</div>
 				</div>
 			</div>

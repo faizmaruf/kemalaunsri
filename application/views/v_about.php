@@ -48,7 +48,7 @@
 							<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<h2>Who We Are</h2>
-									<p class="fh5co-lead"> Awesome source code by <a href="#" target="_blank">Faiz Maruf </a></p>
+									<!-- <p class="fh5co-lead"> Awesome source code by <a href="#" target="_blank">Faiz Maruf </a></p> -->
 								</div>
 							</div>
 						</div>
@@ -90,7 +90,7 @@
 
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-						<h2>The Team</h2>
+						<h2>Badan Pengurus Harian</h2>
 						<p>Kami memiliki tim yang solid. one team, one spirit, and one goal.</p>
 					</div>
 
@@ -99,8 +99,8 @@
 							<div class="avatar mx-auto">
 								<img src="<?php echo base_url() . 'assets/images/bph/' . $row->bph_photo; ?>" class="img-responsive">
 							</div>
-							<div class="card">
-								<h3 class="mt-1"><?= $row->bph_nama; ?></h3>
+							<div class="card" style="height: 250px;">
+								<h3><?= $row->bph_nama; ?></h3>
 								<h4><?= $row->bph_fakultas; ?> <?= $row->bph_angkatan; ?> - <?= $row->bph_jabatan; ?></h4>
 								<p><?= $row->bph_nama; ?> menjabat sebagai <?= $row->bph_jabatan; ?> Kabinet Krakatau Biru</p>
 
@@ -118,29 +118,37 @@
 		</div>
 
 
-		<div class="fh5co-services">
+		<div id="fh5co-why-us" class="animate-box">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
-						<h2>LAYANAN</h2>
+
+					<div class="col-md-4 text-center item-block">
+						<span class="icon"><img src="<?php echo base_url() . 'theme/images/anggota.svg' ?>" class="img-responsive"></span>
+						<h3><?= $jumlahanggota; ?></h3>
+						<!-- <p>Tingkatkan kinerja perusahaan dengan Software yang sesuai dengan Business Process anda.</p> -->
+						<h2>
+							Anggota
+						</h2>
+						<!-- <p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p> -->
 					</div>
 					<div class="col-md-4 text-center item-block">
-						<span class="icon"><img src="<?php echo base_url() . 'theme/images/30.svg' ?>" class="img-responsive"></span>
-						<h3>SOFTWARE & PROGRAM</h3>
-						<p>Tingkatkan kinerja perusahaan dengan Software yang sesuai dengan Business Process anda.</p>
-						<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p>
+						<span class="icon"><img src="<?php echo base_url() . 'theme/images/proker.svg' ?>" class="img-responsive"></span>
+						<h3>34</h3>
+						<!-- <p>Konsultasi kan kebutuhan IT anda pada kami dan ketahui layanan lain yang kami berikan.</p> -->
+						<!-- <p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p> -->
+						<h2>Program Kerja</h2>
 					</div>
 					<div class="col-md-4 text-center item-block">
-						<span class="icon"><img src="<?php echo base_url() . 'theme/images/18.svg' ?>" class="img-responsive"></span>
-						<h3>IT CONSULTING</h3>
-						<p>Konsultasi kan kebutuhan IT anda pada kami dan ketahui layanan lain yang kami berikan.</p>
-						<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p>
-					</div>
-					<div class="col-md-4 text-center item-block">
-						<span class="icon"><img src="<?php echo base_url() . 'theme/images/27.svg' ?>" class="img-responsive"></span>
-						<h3>WEB DESIGN</h3>
-						<p>Bangun identitas bisnis dan usaha anda di dunia Internet melalui Website.</p>
-						<p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p>
+						<span class="icon"><img src="<?php echo base_url() . 'theme/images/alumni.svg' ?>" class="img-responsive"></span>
+						<h3>
+							<!-- <?= $jumlahalumni; ?> -->69
+						</h3>
+						<!-- <p>Bangun identitas bisnis dan usaha anda di dunia Internet melalui Website.</p> -->
+
+						<h2>
+							Alumni
+						</h2>
+						<!-- <p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p> -->
 					</div>
 				</div>
 			</div>

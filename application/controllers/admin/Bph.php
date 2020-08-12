@@ -35,7 +35,7 @@ class Bph extends CI_Controller
                 $config['source_image'] = './assets/images/bph/' . $gbr['file_name'];
                 $config['create_thumb'] = false;
                 $config['maintain_ratio'] = false;
-                $config['quality'] = '90%';
+                $config['quality'] = '70%';
                 $config['width'] = 360;
                 $config['height'] = 240;
                 $config['new_image'] = './assets/images/bph/' . $gbr['file_name'];
@@ -116,7 +116,7 @@ class Bph extends CI_Controller
                 $config['source_image'] = './assets/images/bph/' . $gbr['file_name'];
                 $config['create_thumb'] = false;
                 $config['maintain_ratio'] = false;
-                $config['quality'] = '90%';
+                $config['quality'] = '70%';
                 $config['width'] = 360;
                 $config['height'] = 240;
                 $config['new_image'] = './assets/images/bph/' . $gbr['file_name'];

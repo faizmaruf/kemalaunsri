@@ -44,8 +44,8 @@
 						<div class="container">
 							<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 								<div class="slider-text-inner">
-									<h2>Get in touch. Don't be shy.</h2>
-									<p class="fh5co-lead">Kami siap melayani Anda 24/7</p>
+									<!-- <h2>Get in touch. Don't be shy.</h2>
+									<p class="fh5co-lead">Kami siap melayani Anda 24/7</p> -->
 								</div>
 							</div>
 						</div>

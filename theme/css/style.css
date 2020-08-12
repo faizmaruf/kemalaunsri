@@ -925,12 +925,12 @@ figure {
 .fh5co-staff {
   /* border: 1px solid red; */
   padding-top: 10px;
-  margin: 1em 0px;
+  margin: 5em 0px;
   -webkit-box-shadow: 0px 47px 51px -71px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 47px 51px -71px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 47px 51px -71px rgba(0, 0, 0, 0.75);
   margin-bottom: 1em;
-  max-height: 480px;
+  max-height: 880px;
 }
 
 /* .fh5co-staff img {} */
@@ -948,6 +948,7 @@ figure {
 .card {
   border-right: 2px solid rgba(0, 0, 0, 0.06);
   border-left: 2px solid rgba(0, 0, 0, 0.06);
+  height: 400px;
 }
 
 .fh5co-staff .fh5co-social {
@@ -956,8 +957,7 @@ figure {
 
 }
 
-.fh5co-staff .fh5co-social a {
-  border: 1px solid yellowgreen;
+.fh5co-staff .card .fh5co-social a {
   color: #000;
 }
 
