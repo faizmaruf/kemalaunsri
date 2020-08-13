@@ -24,7 +24,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost:8888/kemalaunsri/';
-
+// $config['base_url'] = 'http://www.kemalaunsri.org/';
 
 /*
 |--------------------------------------------------------------------------
