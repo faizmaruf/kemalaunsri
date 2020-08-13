@@ -1,8 +1,5 @@
-
+---
 deployment:
- 
- tasks:
- 
- - export DEPLOYPATH=/home/kemalaun/public_html
- 
- - /usr/bin/rsync -Paz * $DEPLOYPATH --delete
+  tasks:
+    - export DEPLOYPATH=/home/kemalaun/public_html
+    - /bin/cp -R images $DEPLOYPATH
