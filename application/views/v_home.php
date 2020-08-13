@@ -176,7 +176,7 @@
 
 								<h3 class="text-center ">Rundown Acara Musyawarah Besar</h3>
 
-								<a href="<?php echo base_url("berkasmubes2020/adartgbhpko.docx"); ?>">Download <span class="icon-document"></span> </a>
+								<a href="<?php echo base_url("berkasmubes2020/rundownmubes.docx"); ?>">Download <span class="icon-document"></span> </a>
 
 							</div>
 						</div>
@@ -187,7 +187,7 @@
 
 								<h3 class="text-center ">Tata Tertib Musyawarah Besar</h3>
 
-								<a href="<?php echo base_url("berkasmubes2020/rundownmubes.docx"); ?>">Download <span class="icon-document"></span> </a>
+								<a href="<?php echo base_url("berkasmubes2020/tatibmubes.doc"); ?>">Download <span class="icon-document"></span> </a>
 
 							</div>
 						</div>
@@ -198,7 +198,7 @@
 
 								<h3 class="text-center ">Anggaran Dasar - Anggaran Rumah Tangga, GBHPKO</h3>
 
-								<a href="<?php echo base_url("berkasmubes2020/tatibmubes.doc"); ?>">Download <span class="icon-document"></span> </a>
+								<a href="<?php echo base_url("berkasmubes2020/adartgbhpko.docx"); ?>">Download <span class="icon-document"></span> </a>
 
 							</div>
 						</div>
