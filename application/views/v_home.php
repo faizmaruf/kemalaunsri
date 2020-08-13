@@ -158,6 +158,67 @@
 		</div>
 
 
+
+		<div id="fh5co-blog" class="animate-box">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+						<h2>Berkas Musyawarah Besar</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="fh5co-entry">
+							<div class="fh5co-copy">
+
+								<h3 class="text-center ">Rundown Acara Musyawarah Besar</h3>
+
+								<a href="<?php echo base_url("berkasmubes2020/adartgbhpko.docx"); ?>">Download <span class="icon-document"></span> </a>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-entry">
+							<div class="fh5co-copy">
+
+								<h3 class="text-center ">Tata Tertib Musyawarah Besar</h3>
+
+								<a href="<?php echo base_url("berkasmubes2020/rundownmubes.docx"); ?>">Download <span class="icon-document"></span> </a>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-entry">
+							<div class="fh5co-copy">
+
+								<h3 class="text-center ">Anggaran Dasar - Anggaran Rumah Tangga, GBHPKO</h3>
+
+								<a href="<?php echo base_url("berkasmubes2020/tatibmubes.doc"); ?>">Download <span class="icon-document"></span> </a>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="fh5co-entry">
+							<div class="fh5co-copy">
+
+								<h3 class="text-center ">LPJ Kabinet Krakatau Biru</h3>
+
+								<a href="#">Download <span class="icon-document"></span> </a>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
 		<?php $this->load->view('v_footer'); ?>
 	</div>
 

@@ -16,9 +16,9 @@
 					<li class="<?php if ($active == "Blog") {
 									echo "active";
 								} ?>"><a href="<?php echo base_url() . 'artikel' ?>">Article</a></li>
-					<li class="<?php if ($active == "Gallery") {
-									echo "active";
-								} ?>"><a href="<?php echo base_url() . 'gallery' ?>">Gallery</a></li>
+					<!-- <li class="<?php if ($active == "Gallery") {
+										echo "active";
+									} ?>"><a href="<?php echo base_url() . 'gallery' ?>">Gallery</a></li> -->
 					<li class="<?php if ($active == "Kontak") {
 									echo "active";
 								} ?>"><a href="<?php echo base_url() . 'kontak' ?>">Contact</a></li>
