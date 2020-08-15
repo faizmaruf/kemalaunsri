@@ -72,7 +72,7 @@
 
 					<div class="col-md-4 text-center item-block">
 						<span class="icon"><img src="<?php echo base_url() . 'theme/images/anggota.svg' ?>" class="img-responsive"></span>
-						<h3><?= $jumlahanggota; ?></h3>
+						<h3>> <?= $jumlahanggota; ?></h3>
 						<!-- <p>Tingkatkan kinerja perusahaan dengan Software yang sesuai dengan Business Process anda.</p> -->
 						<h2>
 							Anggota
