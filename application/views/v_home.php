@@ -89,7 +89,7 @@
 					<div class="col-md-4 text-center item-block">
 						<span class="icon"><img src="<?php echo base_url() . 'theme/images/alumni.svg' ?>" class="img-responsive"></span>
 						<h3>
-							<!-- <?= $jumlahalumni; ?> -->69
+							<!-- <?= $jumlahalumni; ?> -->> 100
 						</h3>
 						<!-- <p>Bangun identitas bisnis dan usaha anda di dunia Internet melalui Website.</p> -->
 
