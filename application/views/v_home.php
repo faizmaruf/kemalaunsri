@@ -209,7 +209,7 @@
 
 								<h3 class="text-center ">LPJ Kabinet Krakatau Biru</h3>
 
-								<a href="<?php echo base_url("berkasmubes2020/LPJKEMALAUNSRI2020"); ?>">Download <span class="icon-document"></span> </a>
+								<a href="<?php echo base_url("berkasmubes2020/LPJKEMALAUNSRI2020.pdf"); ?>">Download <span class="icon-document"></span> </a>
 
 							</div>
 						</div>
