@@ -133,7 +133,7 @@
 					</div>
 					<div class="col-md-4 text-center item-block">
 						<span class="icon"><img src="<?php echo base_url() . 'theme/images/proker.svg' ?>" class="img-responsive"></span>
-						<h3>34</h3>
+						<h3>> 25</h3>
 						<!-- <p>Konsultasi kan kebutuhan IT anda pada kami dan ketahui layanan lain yang kami berikan.</p> -->
 						<!-- <p><a href="<?php echo base_url() . 'portfolio' ?>" class="btn btn-primary btn-outline with-arrow">Learn more <i class="icon-arrow-right"></i></a></p> -->
 						<h2>Program Kerja</h2>
@@ -141,7 +141,7 @@
 					<div class="col-md-4 text-center item-block">
 						<span class="icon"><img src="<?php echo base_url() . 'theme/images/alumni.svg' ?>" class="img-responsive"></span>
 						<h3>
-							<!-- <?= $jumlahalumni; ?> -->69
+							<!-- <?= $jumlahalumni; ?> -->> 100
 						</h3>
 						<!-- <p>Bangun identitas bisnis dan usaha anda di dunia Internet melalui Website.</p> -->
 
