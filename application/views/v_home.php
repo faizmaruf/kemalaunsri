@@ -157,7 +157,7 @@
 			</div>
 		</div>
 
-
+		<!-- 
 
 		<div id="fh5co-blog" class="animate-box">
 			<div class="container">
@@ -217,7 +217,7 @@
 
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<?php $this->load->view('v_footer'); ?>
 	</div>
